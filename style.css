@@ -95,6 +95,8 @@ h1 {
 
     position: relative;
     overflow: hidden;
+
+    -webkit-backdrop-filter: blur(15px);
 }
 
 .buttons a:hover {
@@ -148,6 +150,8 @@ h1 {
     transition: 0.3s;
 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+    -webkit-backdrop-filter: blur(15px);
 }
 
 .back:hover {
@@ -199,5 +203,14 @@ h1 {
 
     100% {
         transform: translateY(0px);
+    }
+}
+
+@media (hover: none) {
+    .buttons a:hover,
+    .back:hover {
+        transform: none;
+
+        background: rgba(255, 255, 255, 0.08);
     }
 }
